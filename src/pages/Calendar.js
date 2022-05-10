@@ -19,12 +19,12 @@ export default function Calendar() {
   const [training, setTraining] = useState([]);
   useEffect(() => {
     if (user.role === 'MENTOR') {
-      axios.get(`https://lernigoback.herokuapp.com/api/trainings/user/${user.id}`).then((response) => {
+      axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/trainings/user/${user.id}`).then((response) => {
         setTraining(response.data);
         console.log(response.data);
       });
     } else if (user.role === 'STUDENT') {
-      axios.get(`https://lernigoback.herokuapp.com/api/trainings/participat/${user.id}`).then((response) => {
+      axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/trainings/participat/${user.id}`).then((response) => {
         setTraining(response.data);
         console.log(response.data);
       });

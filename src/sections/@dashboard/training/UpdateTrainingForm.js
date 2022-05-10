@@ -76,7 +76,7 @@ export function UpdateTrainingForm(props) {
       formdata.append('image', values.image);
       formdata.append('trainer', user.id);
       axios
-        .put(`https://lernigoback.herokuapp.com/api/training/update/${props.training._id}`, formdata, {
+        .put(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/update/${props.training._id}`, formdata, {
           headers: { 'Content-Type': 'multipart/form-data' }
         })
         .then((res) => {

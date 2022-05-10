@@ -55,7 +55,7 @@ export default function AccountProfileDetails(props) {
     onSubmit: async ({ firstName, lastName, phone, bio, skills }) => {
       const genericErrorMessage = 'Something went wrong! Please try again later.';
       try {
-        const response = await fetch(`https://lernigoback.herokuapp.com/users/${user.id}`, {
+        const response = await fetch(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/${user.id}`, {
           method: 'PUT',
           credentials: 'include',
           headers: { 'Content-Type': 'application/json' },

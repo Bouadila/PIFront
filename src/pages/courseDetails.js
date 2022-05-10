@@ -29,14 +29,14 @@ export default function CourseDetails() {
 
   useEffect(() => {
     // console.log(id);
-    axios.get(`https://lernigoback.herokuapp.com/api/course/getOne/${id}`).then((response) => {
+    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/course/getOne/${id}`).then((response) => {
       setCourse(response.data);
       console.log(response.data);
     });
   }, []);
 
   let deleteCourse = () => {
-    axios.delete(`https://lernigoback.herokuapp.com/api/course/delete/${id}`).then((response) => {
+    axios.delete(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/course/delete/${id}`).then((response) => {
       // setCourse(response.data);
       window.location.href = '/course';
       console.log(response.data);
@@ -81,7 +81,7 @@ export default function CourseDetails() {
                       <Grid item md={12}>
                         <video height="300" controls>
                           <source
-                            src={`https://lernigoback.herokuapp.com/${item.replace(/\\/, '/')}`}
+                            src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${item.replace(/\\/, '/')}`}
                             type="video/mp4"
                           />
                         </video>
@@ -105,7 +105,7 @@ export default function CourseDetails() {
                       <Grid item md={4}>
                         <img
                           style={{ height: 150, objectFit: 'cover', objectPosition: '50% 50%' }}
-                          src={`https://lernigoback.herokuapp.com/${item.replace(/\\/, '/')}`}
+                          src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${item.replace(/\\/, '/')}`}
                         />
                       </Grid>
                     )

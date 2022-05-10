@@ -83,7 +83,7 @@ export function TrainingForm() {
       formdata.append('image', values.image);
       formdata.append('trainer', user.id);
       axios
-        .post('https://lernigoback.herokuapp.com/api/training/insert', formdata, {
+        .post('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/insert', formdata, {
           headers: { 'Content-Type': 'multipart/form-data' }
         })
         .then((res) => {

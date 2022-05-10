@@ -84,8 +84,8 @@ export default function User() {
     (async () => {
       const response = await fetch(
         !filterName
-          ? `https://lernigoback.herokuapp.com/users/?page=${page}&rows=${rowsPerPage}`
-          : `https://lernigoback.herokuapp.com/users/byName/${filterName}?page=${page}&rows=${rowsPerPage}`,
+          ? `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/?page=${page}&rows=${rowsPerPage}`
+          : `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/byName/${filterName}?page=${page}&rows=${rowsPerPage}`,
         {
           method: 'GET',
           credentials: 'include',
@@ -99,7 +99,7 @@ export default function User() {
         role: user.role,
         isVerified: user.verified,
         status: user.status ? 'active' : 'banned',
-        avatarUrl: 'https://lernigoback.herokuapp.com/' + user.photo
+        avatarUrl: 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com' + user.photo
       }));
       setLength(data.length);
       setUsers(usersData);
@@ -113,7 +113,7 @@ export default function User() {
   };
 
   const banUser = async (id) => {
-    const response = await fetch(`https://lernigoback.herokuapp.com/users/ban/${id}`, {
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/ban/${id}`, {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' }
@@ -132,7 +132,7 @@ export default function User() {
   };
 
   const unbanUser = async (id) => {
-    const response = await fetch(`https://lernigoback.herokuapp.com/users/unban/${id}`, {
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/unban/${id}`, {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' }

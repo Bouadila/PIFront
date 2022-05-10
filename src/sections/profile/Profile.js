@@ -38,7 +38,7 @@ export const Profile = () => {
     const genericErrorMessage = 'Something went wrong! Please try again later.';
     try {
       const response = await fetch(
-        isFollowed ? 'https://lernigoback.herokuapp.com/users/unfollow' : 'https://lernigoback.herokuapp.com/users/follow',
+        isFollowed ? 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/unfollow' : 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/follow',
         {
           method: 'POST',
           credentials: 'include',
@@ -73,7 +73,7 @@ export const Profile = () => {
     (async () => {
       setIsLoading(true);
       try {
-        const response = await fetch(`https://lernigoback.herokuapp.com/api/trainings/user/${mentor._id}`);
+        const response = await fetch(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/trainings/user/${mentor._id}`);
         const data = await response.json();
         setCourses(data);
         console.log(data);
@@ -95,7 +95,7 @@ export const Profile = () => {
         <Grid container spacing={6}>
           <Grid item md={4} xs={8}>
             <Box mb={4}>
-              <Photo url={`https://lernigoback.herokuapp.com/${mentor.photo}`} />
+              <Photo url={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${mentor.photo}`} />
             </Box>
             <LoadingButton
               fullWidth
@@ -127,7 +127,7 @@ export const Profile = () => {
               <CardMedia
                 component="img"
                 height="140"
-                image={`https://lernigoback.herokuapp.com/${training.image}`}
+                image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${training.image}`}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

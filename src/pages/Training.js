@@ -30,12 +30,12 @@ export default function Training() {
   const [searchTerm, setSearchTerm] = useState('');
   const socket = openSocket('http://localhost:8000');
   useEffect(() => {
-    axios.get(`https://lernigoback.herokuapp.com/api/trainings/user/${user.id}`).then((response) => {
+    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/trainings/user/${user.id}`).then((response) => {
       setTraining(response.data);
       // console.log(response.data);
     });
     socket.on('refresh', () => {
-      axios.get(`https://lernigoback.herokuapp.com/api/trainings/user/${user.id}`).then((response) => {
+      axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/trainings/user/${user.id}`).then((response) => {
         setTraining(response.data);
       });
     });
@@ -60,7 +60,7 @@ export default function Training() {
             <CardMedia
               component="img"
               height="140"
-              image={`https://lernigoback.herokuapp.com/${training.image}`}
+              image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${training.image}`}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div" noWrap>

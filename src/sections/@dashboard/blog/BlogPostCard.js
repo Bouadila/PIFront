@@ -85,7 +85,7 @@ export default function BlogPostCard(props) {
   ];*/
   /*const [activityList, setActivityList] = useState([]);
   useEffect(() => {
-    axios.get('https://lernigoback.herokuapp.com/read').then((response) => {
+    axios.get('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comread').then((response) => {
       console.log(response.data);
       setActivityList(response.data);
     });
@@ -102,7 +102,7 @@ export default function BlogPostCard(props) {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`https://lernigoback.herokuapp.com/eya/delete/${id}`);
+        axios.delete(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comeya/delete/${id}`);
         // navigate('/blog', { replace: true });
         Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
       }
@@ -110,7 +110,7 @@ export default function BlogPostCard(props) {
   };
   //ancien del
   /*const deleteActivity = (id) => {
-    axios.delete(`https://lernigoback.herokuapp.com/api/delete/${id}`);
+    axios.delete(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/delete/${id}`);
     navigate('/dashboard/blog', { replace: true });
   };*/
 
@@ -167,7 +167,7 @@ export default function BlogPostCard(props) {
 
           <CoverImgStyle
             alt="img"
-            src={`https://lernigoback.herokuapp.com/${props.element.file[0].fileName}`}
+            src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${props.element.file[0].fileName}`}
           />
         </CardMediaStyle>
 

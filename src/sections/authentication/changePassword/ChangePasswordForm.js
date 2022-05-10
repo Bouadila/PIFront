@@ -27,7 +27,7 @@ export default function ChangePasswordForm() {
   useEffect(() => {
     const getUserId = async () => {
       try {
-        const date = await fetch('https://lernigoback.herokuapp.com/users/verify-restpassword', {
+        const date = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/verify-restpassword', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ restpassword: resetPassword })
@@ -53,7 +53,7 @@ export default function ChangePasswordForm() {
     onSubmit: async ({ password }) => {
       const genericErrorMessage = 'Something went wrong! Please try again later.';
       try {
-        const response = await fetch('https://lernigoback.herokuapp.com/users/update-password', {
+        const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/update-password', {
           method: 'POST',
           credentials: 'include',
           headers: { 'Content-Type': 'application/json' },

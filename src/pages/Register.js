@@ -43,7 +43,7 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function Register() {
   const dispatch = useDispatch();
   const handleLogin = async (googleData) => {
-    const res = await fetch('https://lernigoback.herokuapp.com/users/google', {
+    const res = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/google', {
       method: 'POST',
       body: JSON.stringify({
         token: googleData.tokenId
@@ -68,7 +68,7 @@ export default function Register() {
         followers,
         following,
         id: _id,
-        photo: `https://lernigoback.herokuapp.com/${photo}`,
+        photo: `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${photo}`,
         skills
       })
     );

@@ -59,7 +59,7 @@ export default function EditCourse() {
 
   useEffect(() => {
     // console.log(id);
-    axios.get(`https://lernigoback.herokuapp.com/api/course/getOne/${id}`).then((response) => {
+    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/course/getOne/${id}`).then((response) => {
       setCourse(response.data);
       console.log(response.data);
     });

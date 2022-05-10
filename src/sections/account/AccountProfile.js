@@ -35,7 +35,7 @@ export default function AccountProfile(props) {
       const genericErrorMessage = 'Something went wrong! Please try again later.';
 
       try {
-        const response = await fetch('https://lernigoback.herokuapp.com/users/upload-photo', {
+        const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/upload-photo', {
           method: 'POST',
           body: formData
         });
@@ -45,7 +45,7 @@ export default function AccountProfile(props) {
           dispatch(
             login({
               ...user,
-              photo: `https://lernigoback.herokuapp.com/${data}`
+              photo: `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${data}`
             })
           );
           setPhoto(null);

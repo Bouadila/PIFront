@@ -22,7 +22,7 @@ export default function EmailForm() {
     onSubmit: async ({ email }) => {
       const genericErrorMessage = 'Something went wrong! Please try again later.';
       try {
-        const response = await fetch('https://lernigoback.herokuapp.com/users/resetpassword', {
+        const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/resetpassword', {
           method: 'POST',
           credentials: 'include',
           headers: { 'Content-Type': 'application/json' },

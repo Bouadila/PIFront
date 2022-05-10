@@ -26,7 +26,7 @@ export default function EmailVerified() {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch('https://lernigoback.herokuapp.com/users/active', {
+      const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/active', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },

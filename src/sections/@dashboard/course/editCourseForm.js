@@ -52,7 +52,7 @@ export function CourseForm({ _id, files, name, description, tag, price }) {
       }
 
       axios
-        .patch(`https://lernigoback.herokuapp.com/api/course/patch/${_id}`, formdata, {
+        .patch(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/course/patch/${_id}`, formdata, {
           headers: { 'Content-Type': 'multipart/form-data' }
         })
         .then((res) => {

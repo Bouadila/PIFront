@@ -39,7 +39,7 @@ export default function TrainingsDetail() {
   useEffect(() => {
     (async () => {
       setIsLoading(true);
-      const response = await axios.get(`https://lernigoback.herokuapp.com/api/training/getOne/${id}`);
+      const response = await axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/getOne/${id}`);
       // console.log(response.data);§
       setTraining(response.data);
       setDisable(
@@ -56,7 +56,7 @@ export default function TrainingsDetail() {
   }; //carts
   const applyToTraining = (t) => {
     axios
-      .put(`https://lernigoback.herokuapp.com/api/training/participantToTraining/${training._id}/${user.id}`, {
+      .put(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/participantToTraining/${training._id}/${user.id}`, {
         headers: { 'Content-Type': 'multipart/form-data' }
       })
       .then((res) => {
@@ -93,7 +93,7 @@ export default function TrainingsDetail() {
   };
   //stripe
   async function handleToken(token) {
-    const response = await axios.post('https://lernigoback.herokuapp.com/checkout', { token, training });
+    const response = await axios.post('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comcheckout', { token, training });
     const { status } = response.data;
     console.log('Response:', response.data);
     if (status === 'success') {
@@ -175,7 +175,7 @@ export default function TrainingsDetail() {
                           <CardMedia
                             justify="center"
                             component="img"
-                            image={`https://lernigoback.herokuapp.com/${training.image}`}
+                            image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${training.image}`}
                           />
                         )}
                       </ButtonBase>

@@ -23,7 +23,7 @@ export default function CourseDetails() {
   const { id } = useParams();
  
     useEffect(async () => {
-        const response = await axios.get(`https://lernigoback.herokuapp.com/api/course/getOne/${id}`);
+        const response = await axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/course/getOne/${id}`);
         // console.log(response.data);
         setCourse(response.data);
       }, []);
@@ -65,7 +65,7 @@ export default function CourseDetails() {
                       <Grid item md={12}>
                         <video height="300" controls>
                           <source
-                            src={`https://lernigoback.herokuapp.com/${item.replace(/\\/, '/')}`}
+                            src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${item.replace(/\\/, '/')}`}
                             type="video/mp4"
                           />
                         </video>
@@ -89,7 +89,7 @@ export default function CourseDetails() {
                       <Grid item md={4}>
                         <img
                           style={{ height: 150, objectFit: 'cover', objectPosition: '50% 50%' }}
-                          src={`https://lernigoback.herokuapp.com/${item.replace(/\\/, '/')}`}
+                          src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${item.replace(/\\/, '/')}`}
                         />
                       </Grid>
                     )
