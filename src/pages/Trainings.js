@@ -59,7 +59,7 @@ export default function Trainings() {
   const [training, setTraining] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [allChecked, setAllChecked] = useState(true);
-  const socket = openSocket('http://localhost:8000');
+  const socket = openSocket('https://lernigoback.herokuapp.com/');
   //window.location.reload(true);
 
   const itemsNumberFct = () => {
@@ -124,7 +124,7 @@ export default function Trainings() {
             <CardMedia
               component="img"
               height="140"
-              image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${training.image}`}
+              image={`https://lernigoback.herokuapp.com/${training.image}`}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div" noWrap>

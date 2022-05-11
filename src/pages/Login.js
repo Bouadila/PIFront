@@ -53,6 +53,7 @@ export default function Login() {
       headers: {
         'Content-Type': 'application/json'
       }
+
     });
     const data = await res.json();
     const {
@@ -83,7 +84,7 @@ export default function Login() {
           followers,
           following,
           id: _id,
-          photo: `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${photo}`,
+          photo: `https://lernigoback.herokuapp.com/${photo}`,
           skills
         })
       );

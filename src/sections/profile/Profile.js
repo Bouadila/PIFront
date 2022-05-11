@@ -95,7 +95,7 @@ export const Profile = () => {
         <Grid container spacing={6}>
           <Grid item md={4} xs={8}>
             <Box mb={4}>
-              <Photo url={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${mentor.photo}`} />
+              <Photo url={`https://lernigoback.herokuapp.com/${mentor.photo}`} />
             </Box>
             <LoadingButton
               fullWidth
@@ -127,7 +127,7 @@ export const Profile = () => {
               <CardMedia
                 component="img"
                 height="140"
-                image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${training.image}`}
+                image={`https://lernigoback.herokuapp.com/${training.image}`}
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">

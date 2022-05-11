@@ -41,7 +41,7 @@ export default function CourseStusent() {
           <CardMedia
             component="img"
             height="140"
-            image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${course.files[0].replace(/\\/, '/')}`}
+            image={`https://lernigoback.herokuapp.com/${course.files[0].replace(/\\/, '/')}`}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div" noWrap>

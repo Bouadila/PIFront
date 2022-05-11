@@ -68,7 +68,7 @@ export default function Register() {
         followers,
         following,
         id: _id,
-        photo: `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${photo}`,
+        photo: `https://lernigoback.herokuapp.com/${photo}`,
         skills
       })
     );

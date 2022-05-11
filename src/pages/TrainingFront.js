@@ -72,7 +72,7 @@ export default function TrainingFront() {
             <CardMedia
               component="img"
               height="140"
-              image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${training.image}`}
+              image={`https://lernigoback.herokuapp.com/${training.image}`}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">

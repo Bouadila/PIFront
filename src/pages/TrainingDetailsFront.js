@@ -52,7 +52,7 @@ export default function TrainingDetailsFront() {
                     {training.image && (
                       <CardMedia
                         component="img"
-                        image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${training.image}`}
+                        image={`https://lernigoback.herokuapp.com/${training.image}`}
                       />
                     )}
                   </ButtonBase>

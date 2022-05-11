@@ -28,7 +28,7 @@ export default function Training() {
   const [training, setTraining] = useState([]);
 
   const [searchTerm, setSearchTerm] = useState('');
-  const socket = openSocket('http://localhost:8000');
+  const socket = openSocket('https://lernigoback.herokuapp.com/');
   useEffect(() => {
     axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/trainings/user/${user.id}`).then((response) => {
       setTraining(response.data);
@@ -60,7 +60,7 @@ export default function Training() {
             <CardMedia
               component="img"
               height="140"
-              image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${training.image}`}
+              image={`https://lernigoback.herokuapp.com/${training.image}`}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div" noWrap>

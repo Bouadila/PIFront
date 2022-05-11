@@ -50,7 +50,7 @@ const NEWS = [...Array(5)].map((_, index) => {
       <Box
         component="img"
         alt={props.val.name}
-        src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${props.val.image}`}
+        src={`https://lernigoback.herokuapp.com/${props.val.image}`}
         sx={{ width: 48, height: 48, borderRadius: 1.5 }}
       />
           
@@ -179,7 +179,7 @@ export default function AppNewsUpdate() {
               <Box
                 component="img"
                 alt={val.name}
-                src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${val.image}`}
+                src={`https://lernigoback.herokuapp.com/${val.image}`}
                 sx={{ width: 48, height: 48, borderRadius: 1.5 }}
               />
 

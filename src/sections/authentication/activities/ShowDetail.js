@@ -83,7 +83,7 @@ export default function ShowDetail() {
         {fileActivity.map((file, key) => {
           return (
             <div key={key}>
-              <img src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${file.fileName}`} height="500" alt="img" />
+              <img src={`https://lernigoback.herokuapp.com/${file.fileName}`} height="500" alt="img" />
               <br />
               <center>
                 <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3}>
@@ -92,7 +92,7 @@ export default function ShowDetail() {
 
                     //startIcon={<Iconify icon="flat-color-icons:delete-column" />}
                   >
-                    <a href={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${file.fileName}`} download={file.fileName}>
+                    <a href={`https://lernigoback.herokuapp.com/${file.fileName}`} download={file.fileName}>
                       🔎 Show
                     </a>
                   </Button>
@@ -100,7 +100,7 @@ export default function ShowDetail() {
                   <Button
                     variant="contained"
                     onClick={() => {
-                      saveFile(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${file.fileName}`, file.fileName);
+                      saveFile(`https://lernigoback.herokuapp.com/${file.fileName}`, file.fileName);
                     }}
                     //startIcon={<Iconify icon="flat-color-icons:delete-column" />}
                   >

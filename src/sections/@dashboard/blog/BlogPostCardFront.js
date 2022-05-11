@@ -167,7 +167,7 @@ export default function BlogPostCardFront(props) {
 
           <CoverImgStyle
             alt="img"
-            src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${props.element.file[0].fileName}`}
+            src={`https://lernigoback.herokuapp.com/${props.element.file[0].fileName}`}
           />
         </CardMediaStyle>
 

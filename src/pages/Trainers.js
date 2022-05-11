@@ -103,7 +103,7 @@ export const Trainer = () => {
                     <CardMedia
                       component="img"
                       height="140"
-                      src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${mentor.photo}`}
+                      src={`https://lernigoback.herokuapp.com/${mentor.photo}`}
                       alt={`${mentor.firstName} ${mentor.lastName}`}
                     />
                     <CardContent>
