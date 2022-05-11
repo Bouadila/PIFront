@@ -99,7 +99,7 @@ export default function User() {
         role: user.role,
         isVerified: user.verified,
         status: user.status ? 'active' : 'banned',
-        avatarUrl: 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/' + user.photo
+        avatarUrl: 'https://lernigoback.herokuapp.com/' + user.photo
       }));
       setLength(data.length);
       setUsers(usersData);
