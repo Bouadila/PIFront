@@ -33,7 +33,7 @@ export default function LoginForm() {
       try {
         const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/login', {
           method: 'POST',
-          credentials: 'include',
+          
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password })
         });

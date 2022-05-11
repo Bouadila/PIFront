@@ -33,7 +33,7 @@ export const Trainer = () => {
         isFollowed ? 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/unfollow' : 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/follow',
         {
           method: 'POST',
-          credentials: 'include',
+          
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ student: user.id, mentor: mentor._id })
         }

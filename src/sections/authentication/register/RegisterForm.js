@@ -48,7 +48,7 @@ export default function RegisterForm() {
       try {
         const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/', {
           method: 'POST',
-          credentials: 'include',
+          
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password, firstName, lastName, role })
         });

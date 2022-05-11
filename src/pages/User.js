@@ -88,7 +88,7 @@ export default function User() {
           : `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/byName/${filterName}?page=${page}&rows=${rowsPerPage}`,
         {
           method: 'GET',
-          credentials: 'include',
+          
           headers: { 'Content-Type': 'application/json' }
         }
       );
@@ -115,7 +115,7 @@ export default function User() {
   const banUser = async (id) => {
     const response = await fetch(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/ban/${id}`, {
       method: 'POST',
-      credentials: 'include',
+      
       headers: { 'Content-Type': 'application/json' }
     });
     if (response.status === 200) {
@@ -134,7 +134,7 @@ export default function User() {
   const unbanUser = async (id) => {
     const response = await fetch(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/unban/${id}`, {
       method: 'POST',
-      credentials: 'include',
+      
       headers: { 'Content-Type': 'application/json' }
     });
     if (response.status === 200) {

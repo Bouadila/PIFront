@@ -24,7 +24,7 @@ export default function EmailForm() {
       try {
         const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/resetpassword', {
           method: 'POST',
-          credentials: 'include',
+          
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email })
         });

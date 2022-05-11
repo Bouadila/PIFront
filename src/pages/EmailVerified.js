@@ -28,7 +28,6 @@ export default function EmailVerified() {
     (async () => {
       const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/active', {
         method: 'POST',
-        credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ token })
       });

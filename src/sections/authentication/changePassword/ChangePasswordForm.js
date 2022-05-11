@@ -55,7 +55,7 @@ export default function ChangePasswordForm() {
       try {
         const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/update-password', {
           method: 'POST',
-          credentials: 'include',
+          
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id, password })
         });

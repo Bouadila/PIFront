@@ -57,7 +57,7 @@ export default function AccountProfileDetails(props) {
       try {
         const response = await fetch(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/${user.id}`, {
           method: 'PUT',
-          credentials: 'include',
+          
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ firstName, lastName, phone, bio, skills })
         });
