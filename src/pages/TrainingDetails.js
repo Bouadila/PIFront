@@ -27,7 +27,7 @@ export default function TrainingDetails() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/getOne/${id}`).then((response) => {
+    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/training/getOne/${id}`).then((response) => {
       setTraining(response.data);
     });
   }, []);
@@ -43,7 +43,7 @@ export default function TrainingDetails() {
       confirmButtonText: 'Yes, delete it!'
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/delete/${id}`);
+        axios.delete(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/training/delete/${id}`);
         Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
         setTimeout(() => {
           navigate('/training', { replace: true });
@@ -83,7 +83,7 @@ export default function TrainingDetails() {
                       <CardMedia
                         justify="center"
                         component="img"
-                        image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${training.image}`}
+                        image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${training.image}`}
                       />
                     )}
                   </ButtonBase>

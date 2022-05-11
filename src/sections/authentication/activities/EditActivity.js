@@ -66,7 +66,7 @@ export default function EditActivity() {
   };
   const { id } = useParams();
   useEffect(() => {
-    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comeya/read/detail/${id}`).then((response) => {
+    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/eya/read/detail/${id}`).then((response) => {
       /*let isoDate = response.data.activity.creationDate
         let newDate = moment.utc(isoDate).format('YYYY-MM-DD')*/
 
@@ -100,7 +100,7 @@ export default function EditActivity() {
         console.log(formData);
 
         if (validate(subject, title, limiteDate)) {
-          axios.put(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comeya/update/${id}`, formData).then((response) => {
+          axios.put(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/eya/update/${id}`, formData).then((response) => {
             if (response.data.success) {
               //alert('updated')
             }
@@ -120,7 +120,7 @@ export default function EditActivity() {
     console.log(formData);
 
     if (validate(subject, title, limiteDate)) {
-      axios.put(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/update/${id}`, formData).then((response) => {
+      axios.put(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/update/${id}`, formData).then((response) => {
         if (response.data.success) {
           //alert('updated')
         }

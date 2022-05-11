@@ -30,7 +30,7 @@ export const Trainer = () => {
     const genericErrorMessage = 'Something went wrong! Please try again later.';
     try {
       const response = await fetch(
-        isFollowed ? 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/unfollow' : 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/follow',
+        isFollowed ? 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/users/unfollow' : 'https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/users/follow',
         {
           method: 'POST',
           
@@ -66,7 +66,7 @@ export const Trainer = () => {
     (async () => {
       setIsLoading(true);
       try {
-        const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/trainers');
+        const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/users/trainers');
         const data = await response.json();
         setTrainers(data.trainers);
       } catch (error) {
@@ -103,7 +103,7 @@ export const Trainer = () => {
                     <CardMedia
                       component="img"
                       height="140"
-                      src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${mentor.photo}`}
+                      src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${mentor.photo}`}
                       alt={`${mentor.firstName} ${mentor.lastName}`}
                     />
                     <CardContent>

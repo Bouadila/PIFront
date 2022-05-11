@@ -45,7 +45,7 @@ export default function Login() {
   const dispatch = useDispatch();
   const [status, setStatus] = useState(false);
   const handleLogin = async (googleData) => {
-    const res = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/google', {
+    const res = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/users/google', {
       method: 'POST',
       body: JSON.stringify({
         token: googleData.tokenId
@@ -83,7 +83,7 @@ export default function Login() {
           followers,
           following,
           id: _id,
-          photo: `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${photo}`,
+          photo: `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${photo}`,
           skills
         })
       );

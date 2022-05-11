@@ -39,7 +39,7 @@ export default function TrainingFront() {
   const { addItem , items } = useCart();
   const [training, setTraining] = useState([]);
   useEffect(() => {
-    axios.get('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/getAll').then((response) => {
+    axios.get('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/training/getAll').then((response) => {
       setTraining(response.data);
       // console.log(response.data);
     });
@@ -72,7 +72,7 @@ export default function TrainingFront() {
             <CardMedia
               component="img"
               height="140"
-              image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${training.image}`}
+              image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${training.image}`}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">

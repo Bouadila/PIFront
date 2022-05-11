@@ -94,7 +94,7 @@ export default function CreateActivity() {
   };
   const multipleFilesUpload = async (data) => {
     try {
-      await axios.post('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comeya/multipleFiles', data);
+      await axios.post('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/eya/multipleFiles', data);
     } catch (error) {
       throw error;
     }
@@ -125,7 +125,7 @@ export default function CreateActivity() {
   };
   /*const addToList = () => {
     if (validate(title, file, limiteDate)) {
-      axios.post('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.cominsert', {
+      axios.post('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/insert', {
         title: title,
         file: file,
         //creationDate: creationDate,

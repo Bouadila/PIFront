@@ -31,7 +31,7 @@ export default function LoginForm() {
     onSubmit: async ({ email, password }) => {
       const genericErrorMessage = 'Something went wrong! Please try again later.';
       try {
-        const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/login', {
+        const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/users/login', {
           method: 'POST',
           
           headers: { 'Content-Type': 'application/json' },
@@ -55,7 +55,7 @@ export default function LoginForm() {
               followers,
               following,
               id: _id,
-              photo: `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${photo}`,
+              photo: `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${photo}`,
               skills
             })
           );

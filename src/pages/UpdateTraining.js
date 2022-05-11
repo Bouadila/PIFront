@@ -35,7 +35,7 @@ export default function UpdateTraining() {
   const [training, setTraining] = useState([]);
   const { id } = useParams();
   useEffect(() => {
-    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/getOne/${id}`).then((response) => {
+    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/training/getOne/${id}`).then((response) => {
       setTraining(response.data);
     });
   }, []);

@@ -46,7 +46,7 @@ export default function RegisterForm() {
     onSubmit: async ({ email, password, firstName, lastName, role }, { resetForm }) => {
       const genericErrorMessage = 'Something went wrong! Please try again later.';
       try {
-        const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comusers/', {
+        const response = await fetch('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/users/', {
           method: 'POST',
           
           headers: { 'Content-Type': 'application/json' },

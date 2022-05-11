@@ -290,7 +290,7 @@ export default function Cards() {
                           </TableCell>
                           <TableCell component="th" scope="row" padding="none">
                             <Stack direction="row" alignItems="center" spacing={2}>
-                              <Avatar src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${item.image}`} />
+                              <Avatar src={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${item.image}`} />
                             </Stack>
                           </TableCell>
                           <TableCell align="left">{item.name}</TableCell>

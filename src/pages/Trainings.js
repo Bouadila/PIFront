@@ -92,14 +92,14 @@ export default function Trainings() {
     axios
       .get(
         allChecked
-          ? `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/getAll `
-          : `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/trainings/participat/${user.id}`
+          ? `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/training/getAll `
+          : `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/trainings/participat/${user.id}`
       )
       .then((response) => {
         setTraining(response.data);
       });
     // socket.on('refresh', () => {
-    //   axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/getAll`).then((response) => {
+    //   axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/training/getAll`).then((response) => {
     //     setTraining(response.data);
     //   });
     // });
@@ -124,7 +124,7 @@ export default function Trainings() {
             <CardMedia
               component="img"
               height="140"
-              image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${training.image}`}
+              image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${training.image}`}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="div" noWrap>

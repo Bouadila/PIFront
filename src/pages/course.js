@@ -34,7 +34,7 @@ export default function Course() {
   }
   
   useEffect(() => {
-    axios.get( `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/courses/user/${user.id}`).then((response) => {
+    axios.get( `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/courses/user/${user.id}`).then((response) => {
       setCourse(response.data);
       // console.log(response.data);
     });
@@ -52,7 +52,7 @@ export default function Course() {
           <CardMedia
             component="img"
             height="140"
-            image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${course.files[0].replace(/\\/, '/')}`}
+            image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${course.files[0].replace(/\\/, '/')}`}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div" noWrap>

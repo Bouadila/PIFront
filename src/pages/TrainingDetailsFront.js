@@ -25,7 +25,7 @@ export default function TrainingDetailsFront() {
 
   useEffect(() => {
     // console.log(id);
-    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/training/getOne/${id}`).then((response) => {
+    axios.get(`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/training/getOne/${id}`).then((response) => {
       setTraining(response.data);
       console.log(response.data);
     });
@@ -52,7 +52,7 @@ export default function TrainingDetailsFront() {
                     {training.image && (
                       <CardMedia
                         component="img"
-                        image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${training.image}`}
+                        image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${training.image}`}
                       />
                     )}
                   </ButtonBase>

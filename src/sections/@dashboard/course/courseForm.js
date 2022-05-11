@@ -55,7 +55,7 @@ export function CourseForm() {
       }
 
       axios
-        .post('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/course/add', formdata, {
+        .post('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/course/add', formdata, {
           headers: { 'Content-Type': 'multipart/form-data' }
         })
         .then((res) => {

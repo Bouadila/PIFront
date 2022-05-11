@@ -25,7 +25,7 @@ export default function CourseStusent() {
   const user = useSelector((state) => state.user);
   const [course, setCourse] = useState([]);
   useEffect(() => {
-    axios.get( `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comapi/course/getAll`).then((response) => {
+    axios.get( `https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/api/course/getAll`).then((response) => {
       setCourse(response.data);
       // console.log(response.data);
     });
@@ -41,7 +41,7 @@ export default function CourseStusent() {
           <CardMedia
             component="img"
             height="140"
-            image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com${course.files[0].replace(/\\/, '/')}`}
+            image={`https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/${course.files[0].replace(/\\/, '/')}`}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div" noWrap>

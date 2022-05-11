@@ -1,4 +1,4 @@
-const LOCAL_SERVER_URL = 'https://lernigoback.herokuapp.com';
+const LOCAL_SERVER_URL = 'https://lernigoback.herokuapp.com/';
 export const getToken = async () => {
   try {
     const response = await fetch(`${LOCAL_SERVER_URL}/get-token`, {

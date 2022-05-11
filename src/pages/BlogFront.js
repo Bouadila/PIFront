@@ -36,7 +36,7 @@ export default function BlogFront() {
 
   const getMultipleFiles = async () => {
     try {
-      const { data } = await axios.get('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comeya/getMultipleFiles');
+      const { data } = await axios.get('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/eya/getMultipleFiles');
       return data;
     } catch (error) {
       throw error;
@@ -53,7 +53,7 @@ export default function BlogFront() {
   };
   useEffect(() => {
     getMultipleFilesList();
-    axios.get('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.comread').then((response) => {
+    axios.get('https://cors-anywhere.herokuapp.com/https://lernigoback.herokuapp.com/read').then((response) => {
       console.log(response.data);
       setActivityList(response.data);
     });
